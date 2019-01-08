@@ -1,7 +1,7 @@
 let counter = 0;
 let arr = [];
 let regex = /(\d*)(\D)(\d*)/;
-let result;
+let result = 0;
 let firstNum;
 let firstOp;
 let secondNum;
@@ -72,6 +72,6 @@ function resolveString(){
     $('#display').text(result);
 }
 $('#buttonCe').on('click',function clean(){
-    result = "";
+    result = 0;
     $('#display').text('0');
 });
