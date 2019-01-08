@@ -60,12 +60,12 @@ function resolveString(){
         firstNumber(result);
         firstOperator(result);
         secondNumber(result);
-        var rez = equal(firstNum,firstOp,secondNum);
+        let rez = equal(firstNum,firstOp,secondNum);
         let num1 = result.match(regex);
         numOne = num1[1];
         numTwo = num1[3];
-        var position = numOne.length + numTwo.length +1;
-        var tmp = rez + result.substring(position,result.length);
+        let position = numOne.length + numTwo.length +1;
+        let tmp = rez + result.substring(position,result.length);
         result = tmp;
         console.log(result);
     }
