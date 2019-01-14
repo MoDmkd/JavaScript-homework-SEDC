@@ -14,6 +14,7 @@ $('.numButtons, .opButtons').on('click', function(event) {
     let calcStringWithComma = arr.toString();
     let calcString = calcStringWithComma.replace(/,/g,"");
     result = calcString;
+    $('#display').text(result);
     // console.log(result);
 });
 function firstNumber(result){
@@ -47,20 +48,27 @@ function equal(firstNum,firstOp,secondNum){
         return sum;
     }
     else if (firstOp === "/"){
-        sum = firstNum / secondNum;
+        if (secondNum === 0){
+            sum = "divisionByZero";
+        } else {
+            sum = firstNum / secondNum;
+        }
         return sum;
     }
 }
 $('#buttonEqual').on('click', function(){
     resolveString();
 })
-
 function resolveString(){
     while(result.match(regex)){
         firstNumber(result);
         firstOperator(result);
         secondNumber(result);
         let rez = equal(firstNum,firstOp,secondNum);
+        if (rez === "divisionByZero") {
+            result = "Can't divide by zero";
+            break;
+        }
         let num1 = result.match(regex);
         numOne = num1[1];
         numTwo = num1[3];
