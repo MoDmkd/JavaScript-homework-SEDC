@@ -10,14 +10,16 @@ button {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
+    margin: 2px;
 }
 #display{
     font-family: 'Share Tech Mono', monospace;
-    padding: 3px;
+    padding: 4px 4px 4px 0;
     background-color: lightblue;
     text-align: right;
-    font-size: 2.5em;
+    font-size: 1.2em;
     border-radius: 5px;
+    margin:2px;
 }
 table{
     margin: 50px auto;
