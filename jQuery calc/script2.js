@@ -75,7 +75,7 @@ function resolveString(){
         let position = numOne.length + numTwo.length +1;
         let tmp = rez + result.substring(position,result.length);
         result = tmp;
-        console.log(result);
+        // console.log(result);
     }
     $('#display').text(result);
 }
